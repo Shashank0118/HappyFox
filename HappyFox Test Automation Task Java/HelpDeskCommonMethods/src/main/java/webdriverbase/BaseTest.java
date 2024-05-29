@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void beforeSuite() {
-    	
+    	// We have mentioned the chrome driver Path Explicitly on line 15 under the BeforeSuite method.Try Using user.dir property to get the home directory location.
     	System.setProperty("webdriver.chrome.driver","C:\\Users\\test\\Desktop\\D drive\\automation\\Chrome driver\\chromedriver.exe");
         driver = new ChromeDriver();
     }

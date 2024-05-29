@@ -60,7 +60,7 @@ public class AppPage {
 	public void waitImplicitly() {
 		driver.manage().timeouts().implicitlyWait(WAIT_TIME_SEC, TimeUnit.SECONDS);
 	}
-
+// Using implicty wait twice
 	public void waitImplicitly(int timeOutInSeconds) {
 		driver.manage().timeouts().implicitlyWait(timeOutInSeconds, TimeUnit.SECONDS);
 	}
@@ -95,12 +95,13 @@ public class AppPage {
 
 			scrolltoElement(element);
 		} catch (Exception ex) {
-			
+			// not printing stack trace or assertion failure
 		}
 	}
 	
 	public void scrolltoElement(WebElement element) throws InterruptedException {
 		getJavaScriptExecutor().executeScript("arguments[0].scrollIntoView(false)", element);
+		// Using thread.sleep which is not correct according to coding convention. we can use explicit wait here.
 		Thread.sleep(1000);
 	}
 	

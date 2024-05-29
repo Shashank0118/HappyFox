@@ -56,7 +56,7 @@ static class BasePage {
     }
 
     public void retrieveRowTexts() {
-        List<WebElement> rows = driver.findElements(rowLocator);
+            List<WebElement> rows = driver.findElements(rowLocator);
 
         for (int i = 0; i < rows.size(); i++) {
             WebElement row = rows.get(i);
