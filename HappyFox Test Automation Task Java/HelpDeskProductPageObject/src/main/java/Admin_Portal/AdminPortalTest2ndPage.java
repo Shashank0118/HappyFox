@@ -16,9 +16,11 @@ public class AdminPortalTest2ndPage extends AppPage {
 	}
 	
 	@FindBy(xpath = "//span[@class='hf-top-bar_title_text hf-font-light']")
+	// Here we are not following naming convention
 	private WebElement Title;
 	
-	@FindBy(xpath = "//a[contains(text(),'Pending Tickets')]") 
+	@FindBy(xpath = "//a[contains(text(),'Pending Tickets')]")
+	// Here we are not following naming convention
 	private WebElement PendingTickets;
 	
 	public void clickPendingTickets()
@@ -49,7 +51,8 @@ public class AdminPortalTest2ndPage extends AppPage {
 		return contactName.getText().toString();
 	}
     
-    @FindBy(xpath = "//a[@data-test-id='ticket-side-pane-contact-name']//following::div[1]/div[1]/span[1]") 
+    @FindBy(xpath = "//a[@data-test-id='ticket-side-pane-contact-name']//following::div[1]/div[1]/span[1]")
+	// Here we are not following naming convention
   	private WebElement Emailtxt;
     
     public String getEmailtxt()
@@ -58,7 +61,8 @@ public class AdminPortalTest2ndPage extends AppPage {
 		return Emailtxt.getText().toString();
 	}
     
-    @FindBy(xpath = "//div[contains(text(),'status')]//following::div[1]") 
+    @FindBy(xpath = "//div[contains(text(),'status')]//following::div[1]")
+	// Here we are not following naming convention
   	private WebElement Statustxt;
     
     public String getStatustxt()
@@ -68,8 +72,9 @@ public class AdminPortalTest2ndPage extends AppPage {
 	}
     
     
-    @FindBy(xpath = "//div[contains(text(),'status')]//following::div[1]//following::span[1]/div/div/div/div[2]") 
-  	private WebElement Prioritytxt;
+    @FindBy(xpath = "//div[contains(text(),'status')]//following::div[1]//following::span[1]/div/div/div/div[2]")
+	// Here we are not following naming convention
+	private WebElement Prioritytxt;
     
     public String getPrioritytxt()
 	{
@@ -79,8 +84,9 @@ public class AdminPortalTest2ndPage extends AppPage {
     
       
      
-    @FindBy(xpath = "//span[contains(text(),'Reply')]") 
- 	private WebElement ReplyButton;
+    @FindBy(xpath = "//span[contains(text(),'Reply')]")
+	// Here we are not following naming convention
+	private WebElement ReplyButton;
  	
  	public void clickReplyButton()
   	{
@@ -128,6 +134,7 @@ public class AdminPortalTest2ndPage extends AppPage {
  	public void sendReply() throws InterruptedException
   	{
  		Reply.click();
+		 // Using sleep instead of explicit wait
  		sleep();
  		
   	}
@@ -153,6 +160,7 @@ public class AdminPortalTest2ndPage extends AppPage {
    	}
    
      public void sleep() throws InterruptedException {
+		 // Using sleep instead of explicit wait
     	 Thread.sleep(2000);
      }
 }

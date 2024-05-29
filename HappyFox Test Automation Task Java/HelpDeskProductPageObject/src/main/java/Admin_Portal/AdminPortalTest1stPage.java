@@ -18,7 +18,7 @@ public class AdminPortalTest1stPage extends AppPage {
 		
 	}
 	
-	
+
 	@FindBy(xpath = "//span[@class='hf-top-bar_title_text hf-font-light']")
 	private WebElement Title;
 	
@@ -132,8 +132,9 @@ public class AdminPortalTest1stPage extends AppPage {
 	public void clickPrioritySection() {
 		PrioritySection.click();
 	}
-	
+	// Here we are using absolute xpath instead of relative xpath which could throw us error if the path changes
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[9]/td[2]")
+	// Here we are not following naming convention
 	private WebElement NewPriority;
 	
 	public void clickNewPriority() {
@@ -141,14 +142,16 @@ public class AdminPortalTest1stPage extends AppPage {
 	}
 	
 	@FindBy(xpath = "//input[@data-test-id='form-field-name']")
+	// Here we are not following naming convention
 	private WebElement PriorityName;
 	
 	public void enterPriorityName(String text) {
 		PriorityName.clear();
 		PriorityName.sendKeys(text);
 	}
-	
+	// Here we are using absolute xpath instead of relative xpath which could throw us error if the path changes
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/header[1]/div[2]/nav[1]/div[7]/div[1]/div[1]")
+	// Here we are not following naming convention
 	private WebElement PriorityDescription;
 	
 	public void enterPriorityDescription(String text) {
@@ -165,6 +168,7 @@ public class AdminPortalTest1stPage extends AppPage {
 	}
 	
 	@FindBy(xpath = "//button[@data-test-id='add-priority']")
+	// Here we are not following naming convention
 	private WebElement AddPriority;
 	
 	public void clickAddPriority() {

@@ -20,6 +20,7 @@ import CommonTests.CommonTests1;
             loginasAdmin();
             TestCase1();
             TestCase3();
+
 				
 		} 
 		
